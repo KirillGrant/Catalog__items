@@ -1,0 +1,125 @@
+.catalog__items {
+    width: 750px;
+    margin: 25px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.catalog__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    border: 1px black solid;
+    line-hieight: 20px;
+    font-weight: bold;
+}
+
+.item__flag {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    z-index: 20;
+    text-indent: -1000px;
+}
+
+.item__flag--new {
+    background-image: url("../img/new flag.png");
+    background-repeat: no-repeat;
+}
+
+.item__actions {
+    display: none;
+}
+
+
+.catalog__item:hover .item__actions {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 10;
+}
+
+.actions__btn {
+    display: inline-block;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+    _ padding: 7px 0;
+    text-align: center;
+    border: 3px black solid;
+    border-bottom-color: black;
+    border-radius: 5px;
+    background-color: black;
+    text-decoration: none;
+    color: white;
+}
+
+.actions--buy {
+    background-color: white;
+    color: black;
+}
+
+.actions--bookmark {
+    padding: 10px 10px;
+}
+
+.item__img {
+    width: 220px;
+    height: 170px;
+}
+
+.item__title {
+    text-align: center;
+    min-height: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.item__discount {
+    min-height: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: darkgray;
+    text-decoration: line-through;
+}
+
+.item__price {
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: -20px;
+    padding: 12px 35px;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.item__price:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -38px;
+    width: 0;
+    height: 0;
+    border: 20px white solid;
+    border-left-col\or: red;
+}
+
+.item__price:after:focus {
+    border: 1px black solid;
+}
